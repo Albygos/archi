@@ -102,67 +102,74 @@ body {
 
 
 /* ==========================================================================
-   GALLERY MOVING ANIMATION SYSTEM (Desktop & Mobile)
+   GALLERY MOVING ANIMATION SYSTEM (Faster & Dynamic)
    ========================================================================== */
 
-/* Desktop Gallery Subtle Motion & Interactive Float */
-@keyframes desktopGalleryFloat {
+/* Desktop Gallery Active Motion */
+@keyframes desktopGalleryGlide {
   0% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(0, -8px, 0); }
+  50% { transform: translate3d(-38px, 0, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
 
-@keyframes desktopGalleryDrift {
-  0% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(-18px, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+@keyframes desktopGalleryFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
 }
 
 #Project {
   position: relative;
   overflow: visible;
-  transition: transform 0.4s ease;
 }
 
-#Project #Row, #Project #Row_0 {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+#Project #Row {
+  animation: desktopGalleryGlide 8s ease-in-out infinite !important;
   will-change: transform;
 }
 
-#Project:hover #Row {
-  animation: desktopGalleryDrift 16s ease-in-out infinite;
+#Project #Row_0 {
+  animation: desktopGalleryGlide 8s ease-in-out infinite reverse !important;
+  will-change: transform;
+}
+
+#Project:hover #Row, #Project:hover #Row_0 {
+  animation-play-state: paused !important;
 }
 
 #Project #Content, #Project #Content_2, #Project #Content_3, #Project #Content_5 {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 #Project #Content:hover, #Project #Content_2:hover, #Project #Content_3:hover, #Project #Content_5:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-8px) scale(1.03);
   z-index: 10;
 }
 
-/* Mobile Gallery Moving Track Animation */
+/* Mobile Gallery Faster Glide Animation */
 @keyframes mobileGalleryGlide {
   0% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(-35px, 0, 0); }
+  50% { transform: translate3d(-60px, 0, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
 
-#mob_Group_45, #mob_Group_46, #mob_Group_47 {
-  animation: mobileGalleryGlide 14s ease-in-out infinite;
+#mob_Group_45 {
+  animation: mobileGalleryGlide 6s ease-in-out infinite !important;
   will-change: transform;
 }
 
 #mob_Group_46 {
-  animation-delay: -4.5s;
+  animation: mobileGalleryGlide 6s ease-in-out infinite !important;
+  animation-delay: -2s !important;
+  will-change: transform;
 }
 
 #mob_Group_47 {
-  animation-delay: -9s;
+  animation: mobileGalleryGlide 6s ease-in-out infinite !important;
+  animation-delay: -4s !important;
+  will-change: transform;
 }
 
-/* Pause animations if user interacts or touches */
 #mob_Group_45:active, #mob_Group_46:active, #mob_Group_47:active {
   animation-play-state: paused;
 }
@@ -1437,39 +1444,61 @@ body ::-webkit-scrollbar { display: none; }
 #kp-app li a { word-break: break-word; color: rgb(59, 55, 55); font-size: 14px; }
 #kp-app .volume { margin-left: 5px; word-break: normal; color: rgb(59, 55, 55); font-size: 14px; white-space: nowrap; }
 #kp-app .kp-spark { display: inline-block; vertical-align: middle; flex: 0 0 auto; }
-@media only screen and (max-width: 768px) {
-  #mob_made-with-f2w-logo { width: 32px; height: 32px; }
-}
 
 
-  /* Mobile Branding Styles */
-  @media only screen and (max-width:768px){#made-with-f2w-logo{width:32px;height:32px}}
 
   /* Mobile Moving Marquees & Bottom Whitespace Elimination */
   
-/* Mobile Marquee Infrastructure */
-.mob-marquee-container {
-  overflow: hidden !important;
+/* ==========================================================================
+   MOBILE FULL-WIDTH CONTINUOUS MARQUEES (RIGHT END SMOOTH ENTRY)
+   ========================================================================== */
+
+#mob_about-salient-features {
+  width: 390px !important;
+  max-width: 390px !important;
+  height: 207px !important;
   position: absolute !important;
-  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  top: 1468px !important;
+  left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
+  background-color: #f2f4f7 !important;
+}
+
+#mob__1_176 {
+  position: absolute !important;
+  top: 25px !important;
+  left: 20px !important;
+  font-family: Poppins, system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #a0a0a0 !important;
 }
 
 #mob_Container_0_0 {
   width: 390px !important;
-  height: 90px !important;
-  top: 82px !important;
+  max-width: 390px !important;
+  height: 110px !important;
+  position: absolute !important;
+  top: 65px !important;
   left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
   display: flex !important;
   align-items: center !important;
-  background: transparent !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 #mob_about-salient-features_0 {
   width: 390px !important;
-  height: 190px !important;
+  max-width: 390px !important;
+  height: 207px !important;
+  position: absolute !important;
   top: 2644px !important;
   left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
   background-color: #f2f4f7 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -1477,7 +1506,7 @@ body ::-webkit-scrollbar { display: none; }
 
 #mob__1_189 {
   position: absolute !important;
-  top: 22px !important;
+  top: 25px !important;
   left: 20px !important;
   font-family: Poppins, system-ui, sans-serif !important;
   font-size: 16px !important;
@@ -1487,9 +1516,11 @@ body ::-webkit-scrollbar { display: none; }
 
 .mob-tools-track-wrapper {
   position: absolute !important;
-  top: 60px !important;
+  top: 65px !important;
   left: 0 !important;
+  right: 0 !important;
   width: 390px !important;
+  max-width: 390px !important;
   height: 110px !important;
   overflow: hidden !important;
   display: flex !important;
@@ -1506,16 +1537,17 @@ body ::-webkit-scrollbar { display: none; }
   will-change: transform;
 }
 
-/* Salient Features Animation */
+/* Salient Features Animation - Smooth Right to Left Entry */
 .mob-salient-track {
-  animation: mobContinuousSalient 22s linear infinite !important;
+  animation: mobContinuousSalient 18s linear infinite !important;
 }
 
 .mob-salient-group {
   display: flex !important;
   align-items: center !important;
-  gap: 28px !important;
-  padding-right: 28px !important;
+  gap: 32px !important;
+  padding-right: 32px !important;
+  flex-shrink: 0 !important;
 }
 
 .mob-salient-item {
@@ -1526,8 +1558,8 @@ body ::-webkit-scrollbar { display: none; }
 }
 
 .mob-salient-icon {
-  width: 44px !important;
-  height: 44px !important;
+  width: 46px !important;
+  height: 46px !important;
   object-fit: contain !important;
   flex-shrink: 0 !important;
 }
@@ -1541,16 +1573,17 @@ body ::-webkit-scrollbar { display: none; }
   white-space: nowrap !important;
 }
 
-/* Tools Marquee Animation */
+/* Tools Marquee Animation - Smooth Right to Left Entry */
 .mob-tools-track {
-  animation: mobContinuousTools 18s linear infinite !important;
+  animation: mobContinuousTools 16s linear infinite !important;
 }
 
 .mob-tools-group {
   display: flex !important;
   align-items: center !important;
-  gap: 32px !important;
-  padding-right: 32px !important;
+  gap: 24px !important;
+  padding-right: 24px !important;
+  flex-shrink: 0 !important;
 }
 
 .mob-tool-item {
@@ -1558,21 +1591,29 @@ body ::-webkit-scrollbar { display: none; }
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  height: 70px !important;
+  height: 64px !important;
   background: #ffffff !important;
   padding: 8px 18px !important;
   border-radius: 8px !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
 .mob-tool-img {
-  max-height: 42px !important;
+  display: block !important;
+  max-height: 40px !important;
   max-width: 110px !important;
   width: auto !important;
   height: auto !important;
   object-fit: contain !important;
 }
+
+.tool-autocad .mob-tool-img { max-height: 42px !important; max-width: 95px !important; }
+.tool-3dsmax .mob-tool-img { max-height: 42px !important; max-width: 95px !important; }
+.tool-revit .mob-tool-img { max-height: 30px !important; max-width: 120px !important; }
+.tool-photoshop .mob-tool-img { max-height: 34px !important; max-width: 110px !important; }
+.tool-rhino .mob-tool-img { max-height: 32px !important; max-width: 115px !important; }
+.tool-lumion .mob-tool-img { max-height: 38px !important; max-width: 105px !important; }
 
 @keyframes mobContinuousSalient {
   0% { transform: translate3d(0, 0, 0); }
@@ -2370,46 +2411,46 @@ body ::-webkit-scrollbar { display: none; }
           <!-- Group 1 -->
           <div class="mob-salient-group">
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Sustainable Design" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="Sustainable Design" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">Sustainable<br>Design</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="480+ Completed" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="480+ Completed" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">480+ Completed<br>Projects &amp; Villas</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Award Winner" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="Award Winner" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">National Award Winner<br>2021 &amp; 2022 Excellence</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="PhD Certified" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="PhD Certified" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">Sustainable Architecture<br>PhD Certified</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">40+ Expert Contractors<br>&amp; Turnkey Execution</span>
             </div>
           </div>
-          <!-- Group 2 (Duplicate for Seamless Loop) -->
+          <!-- Group 2 (Duplicate for Seamless 50% Loop) -->
           <div class="mob-salient-group" aria-hidden="true">
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Sustainable Design" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="Sustainable Design" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">Sustainable<br>Design</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="480+ Completed" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="480+ Completed" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">480+ Completed<br>Projects &amp; Villas</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Award Winner" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="Award Winner" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">National Award Winner<br>2021 &amp; 2022 Excellence</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="PhD Certified" class="mob-salient-icon">
+              <img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-8309413481963e6de20d06afc6b5582bd17959ea/public" alt="PhD Certified" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">Sustainable Architecture<br>PhD Certified</span>
             </div>
             <div class="mob-salient-item">
-              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon" loading="eager">
               <span class="mob-salient-text">40+ Expert Contractors<br>&amp; Turnkey Execution</span>
             </div>
           </div>
@@ -2422,21 +2463,21 @@ body ::-webkit-scrollbar { display: none; }
         <div class="mob-marquee-track mob-tools-track">
           <!-- Group 1 -->
           <div class="mob-tools-group">
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-46b87cebf5d58fff3bfdb7d622162692d1cb909e/public" alt="AutoCAD" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-fc6e94473347f8ae26c117b186b1f23bb1d9db52/public" alt="3ds Max" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-24874c4314db5a5fbc40d7c0f16f56361a943714/public" alt="Revit" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-5e5898863c0a5975143a53d100067643b2f56ca1/public" alt="Photoshop" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-c0f2b3e4142f3ea9ea65a6e2a901844fa0cb1628/public" alt="Rhino" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-769b7f58cb2e95648ca4e815616f7344be896f6a/public" alt="Lumion" class="mob-tool-img"></div>
+            <div class="mob-tool-item tool-autocad"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-98be951fd373d86a8cf6f5d1158bd79be082565e/w=332" alt="AutoCAD" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-3dsmax"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-53a0078a45545131b004a396a72796b95b1cdc80/w=332" alt="3ds Max" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-revit"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-6199c743b22218fca813ca704a61169f953f0c77/w=332" alt="Revit" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-photoshop"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-161b3a899cb7b41d7272c409d572286a682f4d4e/h=108" alt="Photoshop" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-rhino"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-ff37c4757c8066e3ce58567e0f5d531c18dc82af/h=100" alt="Rhino" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-lumion"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-43ebdc3d98bc1bcba9d1005e4992a3abcd596ac3/w=328" alt="Lumion" class="mob-tool-img" loading="eager"></div>
           </div>
-          <!-- Group 2 (Duplicate for Seamless Loop) -->
+          <!-- Group 2 (Duplicate for Seamless 50% Loop) -->
           <div class="mob-tools-group" aria-hidden="true">
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-46b87cebf5d58fff3bfdb7d622162692d1cb909e/public" alt="AutoCAD" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-fc6e94473347f8ae26c117b186b1f23bb1d9db52/public" alt="3ds Max" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-24874c4314db5a5fbc40d7c0f16f56361a943714/public" alt="Revit" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-5e5898863c0a5975143a53d100067643b2f56ca1/public" alt="Photoshop" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-c0f2b3e4142f3ea9ea65a6e2a901844fa0cb1628/public" alt="Rhino" class="mob-tool-img"></div>
-            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-769b7f58cb2e95648ca4e815616f7344be896f6a/public" alt="Lumion" class="mob-tool-img"></div>
+            <div class="mob-tool-item tool-autocad"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-98be951fd373d86a8cf6f5d1158bd79be082565e/w=332" alt="AutoCAD" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-3dsmax"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-53a0078a45545131b004a396a72796b95b1cdc80/w=332" alt="3ds Max" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-revit"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-6199c743b22218fca813ca704a61169f953f0c77/w=332" alt="Revit" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-photoshop"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-161b3a899cb7b41d7272c409d572286a682f4d4e/h=108" alt="Photoshop" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-rhino"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-ff37c4757c8066e3ce58567e0f5d531c18dc82af/h=100" alt="Rhino" class="mob-tool-img" loading="eager"></div>
+            <div class="mob-tool-item tool-lumion"><img src="https://marquita-f74p5qzwgx.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/marquita-f74p5qzwgx.figweb.site-43ebdc3d98bc1bcba9d1005e4992a3abcd596ac3/w=328" alt="Lumion" class="mob-tool-img" loading="eager"></div>
           </div>
         </div>
       </div>
@@ -2491,18 +2532,7 @@ body ::-webkit-scrollbar { display: none; }
       </div>
     </div>
   </div>
-<a href="https://divriots.com/figma.to.website?ref=free" target="_blank" title="Your website directly from Figma" style="z-index:999999;color:#242424;background-color:#fff;border-radius:6px;align-items:center;padding:4px;text-decoration:none;display:flex;position:fixed;bottom:16px;right:16px;box-shadow:0 .637473px 1.14745px -1.125px #00000042,0 1.93094px 3.4757px -2.25px #0000003d,0 5.10423px 9.18761px -3.375px #00000031,0 16px 28.8px -4.5px #00000008">
-  <style>@media only screen and (max-width:768px){#made-with-f2w-logo{width:32px;height:32px}}</style>
-  <span style="text-align:right;padding:0 4px 0 2px;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:12px;font-weight:700;line-height:13px">
-    Made<br>with
-  </span>
-  <!-- START LOGO -->
-  <svg id="mob_made-with-f2w-logo" fill="none" height="42px" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <rect fill="#0ACE82" height="70" rx="4.99844" width="70"></rect>
-    <path d="m11.3834 18.9395h-1.44395v6.5293h-2.6839v-6.5293h-.9731v-2.2287h.9731v-.2512c0-1.0777.30868-1.8939.92603-2.4484.61735-.5651 1.52244-.8476 2.71532-.8476.1988 0 .3453.0053.4394.0157v2.2758c-.5127-.0314-.8737.0419-1.0829.2198-.2093.1779-.31395.497-.31395.9574v.0785h1.44395zm2.0616-3.1391c-.4708 0-.858-.136-1.1614-.408-.293-.2826-.4395-.6279-.4395-1.0359 0-.4186.1465-.7639.4395-1.0359.3034-.2825.6906-.4238 1.1614-.4238.4604 0 .8371.1413 1.1301.4238.3034.272.4552.6173.4552 1.0359 0 .408-.1518.7533-.4552 1.0359-.293.272-.6697.408-1.1301.408zm1.3341.9104v8.758h-2.6839v-8.758zm4.7231-.1256c.6173 0 1.1562.1256 1.6166.3767.4709.2511.8319.5807 1.083.9888v-1.2399h2.6839v8.7423c0 .8056-.1622 1.5329-.4866 2.1816-.3139.6592-.8004 1.1824-1.4596 1.5695-.6488.3872-1.4597.5808-2.4328.5808-1.2975 0-2.3491-.3087-3.1548-.9261-.8057-.6068-1.2661-1.4335-1.3812-2.4798h2.6526c.0837.3348.2825.5964.5964.7847.3139.1989.701.2983 1.1614.2983.5546 0 .9941-.1622 1.3184-.4866.3349-.3139.5023-.8214.5023-1.5224v-1.24c-.2616.4081-.6226.7429-1.083 1.0045-.4604.2512-.9993.3767-1.6166.3767-.722 0-1.376-.1831-1.9619-.5493-.586-.3767-1.0516-.9051-1.3969-1.5853-.3348-.6905-.5023-1.4858-.5023-2.3856 0-.8999.1675-1.6899.5023-2.37.3453-.6802.8109-1.2033 1.3969-1.5696.5859-.3662 1.2399-.5493 1.9619-.5493zm2.6996 4.5046c0-.6697-.1884-1.1981-.565-1.5853-.3663-.3871-.8162-.5807-1.3498-.5807-.5337 0-.9888.1936-1.3655.5807-.3663.3767-.5494.8999-.5494 1.5696 0 .6696.1831 1.2033.5494 1.6009.3767.3871.8318.5807 1.3655.5807.5336 0 .9835-.1936 1.3498-.5807.3766-.3872.565-.9156.565-1.5852zm15.2513-4.4732c1.0882 0 1.9514.3296 2.5897.9888.6488.6592.9731 1.5748.9731 2.7467v5.1167h-2.6682v-4.7557c0-.5651-.1517-.9993-.4551-1.3027-.293-.3139-.7011-.4709-1.2243-.4709s-.9365.157-1.2399.4709c-.293.3034-.4395.7376-.4395 1.3027v4.7557h-2.6682v-4.7557c0-.5651-.1517-.9993-.4551-1.3027-.293-.3139-.7011-.4709-1.2243-.4709s-.9365.157-1.2399.4709c-.293.3034-.4395.7376-.4395 1.3027v4.7557h-2.6839v-8.758h2.6839v1.0986c.2721-.3662.6278-.6539 1.0673-.8632.4395-.2197.9365-.3296 1.4911-.3296.6592 0 1.2451.1413 1.7578.4238.5232.2825.9313.6853 1.2243 1.2085.3034-.4813.7167-.8737 1.2399-1.1771.5232-.3035 1.0934-.4552 1.7108-.4552zm4.3569 4.4575c0-.8999.1674-1.6899.5023-2.37.3453-.6802.8109-1.2033 1.3968-1.5696.586-.3662 1.24-.5493 1.962-.5493.6173 0 1.1562.1256 1.6166.3767.4708.2511.8318.5807 1.083.9888v-1.2399h2.6839v8.758h-2.6839v-1.24c-.2616.4081-.6279.7377-1.0987.9888-.4604.2512-.9993.3767-1.6166.3767-.7116 0-1.3603-.1831-1.9463-.5493-.5859-.3767-1.0515-.9051-1.3968-1.5853-.3349-.6905-.5023-1.4858-.5023-2.3856zm6.5607.0157c0-.6697-.1884-1.1981-.5651-1.5853-.3662-.3871-.8161-.5807-1.3498-.5807-.5336 0-.9888.1936-1.3655.5807-.3662.3767-.5493.8999-.5493 1.5696 0 .6696.1831 1.2033.5493 1.6009.3767.3871.8319.5807 1.3655.5807.5337 0 .9836-.1936 1.3498-.5807.3767-.3872.5651-.9156.5651-1.5852zm5.3318 4.5045c-.4708 0-.858-.136-1.1614-.4081-.293-.2825-.4395-.6278-.4395-1.0359 0-.4185.1465-.769.4395-1.0515.3034-.2826.6906-.4238 1.1614-.4238.4604 0 .8371.1412 1.1301.4238.3034.2825.4551.633.4551 1.0515 0 .4081-.1517.7534-.4551 1.0359-.293.2721-.6697.4081-1.1301.4081zm-41.8325 13.5986v2.2759h-1.3655c-.97312 0-1.73173-.2355-2.27584-.7063-.5441-.4814-.81615-1.2609-.81615-2.3386v-3.4844h-1.06728v-2.2287h1.06728v-2.1346h2.68389v2.1346h1.7579v2.2287h-1.7579v3.5157c0 .2616.0628.45.1884.5651.1255.1151.3348.1726.6278.1726zm4.9322 2.4014c-.858 0-1.6323-.1831-2.3229-.5493-.6801-.3662-1.219-.8894-1.6166-1.5696-.3871-.6801-.5807-1.4753-.5807-2.3856 0-.8999.1988-1.6899.5964-2.37.3976-.6906.9417-1.219 1.6323-1.5853.6906-.3662 1.4649-.5493 2.3229-.5493s1.6323.1831 2.3229.5493c.6906.3663 1.2347.8947 1.6323 1.5853.3977.6801.5965 1.4701.5965 2.37 0 .8998-.2041 1.6951-.6122 2.3856-.3976.6802-.9469 1.2034-1.648 1.5696-.6906.3662-1.4649.5493-2.3229.5493zm0-2.3229c.5127 0 .947-.1883 1.3027-.565.3663-.3767.5494-.9156.5494-1.6166 0-.7011-.1779-1.24-.5337-1.6167-.3453-.3766-.7743-.565-1.287-.565-.5232 0-.9574.1884-1.3027.565-.3453.3663-.5179.9051-.5179 1.6167 0 .701.1674 1.2399.5022 1.6166.3453.3767.7743.565 1.287.565zm6.7132 2.3229c-.4709 0-.858-.136-1.1614-.4081-.293-.2825-.4395-.6278-.4395-1.0359 0-.4185.1465-.769.4395-1.0515.3034-.2826.6905-.4238 1.1614-.4238.4604 0 .8371.1412 1.1301.4238.3034.2825.4551.633.4551 1.0515 0 .4081-.1517.7534-.4551 1.0359-.293.2721-.6697.4081-1.1301.4081zm-3.9547 7.1165-2.37 8.758h-2.9664l-1.3812-5.6818-1.4283 5.6818h-2.95071l-2.38568-8.758h2.68389l1.2399 6.2624 1.4754-6.2624h2.8408l1.4911 6.231 1.2242-6.231zm8.7299 4.2377c0 .2511-.0157.5127-.0471.7848h-6.0741c.0419.5441.2145.9626.518 1.2556.3139.2825.6958.4238 1.1457.4238.6697 0 1.1353-.2826 1.3969-.8476h2.8565c-.1464.5755-.4133 1.0935-.8004 1.5539-.3767.4603-.8528.8213-1.4283 1.0829s-1.219.3924-1.9305.3924c-.858 0-1.6219-.1831-2.2915-.5493-.6697-.3662-1.1929-.8894-1.5696-1.5696-.3766-.6801-.565-1.4753-.565-2.3856 0-.9104.1831-1.7056.5493-2.3857.3767-.6802.8999-1.2033 1.5696-1.5696.6696-.3662 1.4387-.5493 2.3072-.5493.8475 0 1.6009.1779 2.2601.5336.6592.3558 1.1719.8633 1.5382 1.5225.3766.6592.565 1.4283.565 2.3072zm-2.7467-.7063c0-.4604-.1569-.8266-.4709-1.0987-.3139-.272-.7062-.408-1.1771-.408-.4499 0-.8319.1308-1.1458.3923-.3034.2616-.4917.6331-.565 1.1144zm6.2971-2.2915c.2512-.4081.6122-.7377 1.083-.9888.4709-.2511 1.0097-.3767 1.6166-.3767.722 0 1.376.1831 1.9619.5493.586.3663 1.0464.8894 1.3812 1.5696.3453.6801.518 1.4701.518 2.37 0 .8998-.1727 1.6951-.518 2.3856-.3348.6802-.7952 1.2086-1.3812 1.5853-.5859.3662-1.2399.5493-1.9619.5493-.6173 0-1.1562-.1203-1.6166-.361-.4604-.2511-.8214-.5807-1.083-.9888v1.2243h-2.6839v-11.6146h2.6839zm3.8297 3.1234c0-.6697-.1884-1.1929-.565-1.5696-.3663-.3871-.8214-.5807-1.3655-.5807-.5337 0-.9888.1936-1.3655.5807-.3662.3872-.5494.9156-.5494 1.5853 0 .6696.1832 1.198.5494 1.5852.3767.3871.8318.5807 1.3655.5807.5336 0 .9888-.1936 1.3655-.5807.3766-.3976.565-.9313.565-1.6009zm7.1525 4.5202c-.7638 0-1.4439-.1308-2.0404-.3924-.5964-.2616-1.0673-.6173-1.4125-1.0673-.3453-.4603-.5389-.9731-.5808-1.5381h2.6525c.0314.3035.1727.5493.4238.7377.2511.1883.5598.2825.926.2825.3349 0 .5912-.0628.7691-.1883.1883-.1361.2825-.3087.2825-.518 0-.2511-.1308-.4342-.3924-.5493-.2616-.1256-.6853-.2616-1.2713-.4081-.6278-.1465-1.151-.2982-1.5695-.4552-.4186-.1674-.7796-.4237-1.083-.769-.3034-.3558-.4552-.8319-.4552-1.4283 0-.5023.1361-.9574.4081-1.3655.2825-.4185.6906-.7481 1.2243-.9888.5441-.2407 1.1876-.361 1.9305-.361 1.0986 0 1.9619.2721 2.5897.8162.6383.5441 1.0045 1.266 1.0987 2.1659h-2.4799c-.0418-.3034-.1779-.5441-.4081-.722-.2197-.1779-.5127-.2668-.8789-.2668-.3139 0-.5546.0628-.722.1884-.1674.1151-.2511.2772-.2511.4865 0 .2511.1308.4395.3924.565.272.1256.6906.2512 1.2556.3767.6487.1674 1.1771.3349 1.5852.5023.4081.1569.7639.4185 1.0673.7847.3139.3558.4761.8371.4866 1.444 0 .5127-.1465.9731-.4395 1.3812-.2825.3976-.6958.7115-1.2399.9417-.5337.2302-1.1563.3453-1.8678.3453zm5.9896-9.7939c-.4708 0-.858-.136-1.1614-.408-.293-.2826-.4395-.6279-.4395-1.0359 0-.4186.1465-.7639.4395-1.0359.3034-.2825.6906-.4238 1.1614-.4238.4604 0 .8371.1413 1.1301.4238.3034.272.4551.6173.4551 1.0359 0 .408-.1517.7533-.4551 1.0359-.293.272-.6697.408-1.1301.408zm1.3341.9104v8.758h-2.6839v-8.758zm6.2769 6.4821v2.2759h-1.3655c-.9731 0-1.7317-.2355-2.2758-.7063-.5441-.4814-.8162-1.2609-.8162-2.3386v-3.4844h-1.0672v-2.2287h1.0672v-2.1346h2.6839v2.1346h1.7579v2.2287h-1.7579v3.5157c0 .2616.0628.45.1884.5651s.3348.1726.6278.1726zm9.2014-2.2444c0 .2511-.0157.5127-.0471.7848h-6.0741c.0419.5441.2145.9626.518 1.2556.3139.2825.6958.4238 1.1457.4238.6697 0 1.1353-.2826 1.3969-.8476h2.8566c-.1465.5755-.4134 1.0935-.8005 1.5539-.3767.4603-.8528.8213-1.4283 1.0829s-1.219.3924-1.9305.3924c-.858 0-1.6219-.1831-2.2915-.5493-.6697-.3662-1.1929-.8894-1.5695-1.5696-.3767-.6801-.5651-1.4753-.5651-2.3856 0-.9104.1831-1.7056.5494-2.3857.3766-.6802.8998-1.2033 1.5695-1.5696.6697-.3662 1.4387-.5493 2.3072-.5493.8475 0 1.6009.1779 2.2601.5336.6592.3558 1.1719.8633 1.5382 1.5225.3767.6592.565 1.4283.565 2.3072zm-2.7467-.7063c0-.4604-.1569-.8266-.4708-1.0987-.314-.272-.7063-.408-1.1772-.408-.4499 0-.8318.1308-1.1458.3923-.3034.2616-.4917.6331-.565 1.1144z" fill="#242424"></path>
-  </svg>
-  <!-- END LOGO -->
-</a>
+
 
     </div>
   </div>
