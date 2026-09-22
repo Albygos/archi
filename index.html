@@ -29,7 +29,7 @@
   <style id="unified-responsive-styles">
 
 /* ==========================================================================
-   SHARED BASE RESET & FONTS (EXACT SOURCE CODE)
+   SHARED BASE RESET & FONTS
    ========================================================================== */
 article.prose{line-height:1.75;display:contents}article.prose a{font-weight:500;text-decoration:underline}article.prose h1{margin-block:0 1.23em;font-size:2.25em;line-height:1.11}article.prose h2{margin-block:2em 1em;font-size:1.5em;line-height:1.34}article.prose h3{margin-block:1.6em .6em;font-size:1.25em;line-height:1.6}article.prose h4{margin-top:1.5em;margin-bottom:.5em;line-height:1.5}article.prose img{width:100%;margin-block:2em}article.prose figure.cms-image,article.prose figure.cms-video{margin-block:2em}article.prose figure>*{margin-block:0}article.prose figure.cms-image img,article.prose figure.cms-video video,article.prose figure.cms-video iframe{width:100%;display:block}article.prose figure.cms-video iframe{aspect-ratio:16/9;border:0}article.prose figcaption{opacity:.7;margin-top:.857143em;font-size:.875em;line-height:1.42857}article.prose .columns{gap:1.5em;margin-block:1.25em;display:flex}article.prose .column{flex:1;min-width:0}@media (max-width:640px){article.prose .columns{flex-direction:column}}article.prose blockquote{margin-block:1.6em;padding:.75em 1.25em}article.prose ul,article.prose ol{padding-inline-start:1.5em}article.prose table{table-layout:auto;width:100%;margin:1.5em 0}article.prose thead th{vertical-align:bottom;font-weight:600}article.prose tbody td{vertical-align:baseline}article.prose tfoot td{vertical-align:top}article.prose th,article.prose td{text-align:start;padding:.75em}article.prose thead th:first-child,article.prose tbody td:first-child,article.prose tfoot td:first-child{padding-inline-start:0}article.prose thead th:last-child,article.prose tbody td:last-child,article.prose tfoot td:last-child{padding-inline-end:0}article.prose thead{box-shadow:0 1px #ffffffbf,0 1px}article.prose tbody tr{box-shadow:0 1px #ffffffd9,0 1px}article.prose hr{opacity:.3;margin:3em 0}
 @font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvvYwYL8g.woff2)format("woff2");unicode-range:U+460-52F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvmYwYL8g.woff2)format("woff2");unicode-range:U+301,U+400-45F,U+490-491,U+4B0-4B1,U+2116}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvuYwYL8g.woff2)format("woff2");unicode-range:U+1F??}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvhYwYL8g.woff2)format("woff2");unicode-range:U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvtYwYL8g.woff2)format("woff2");unicode-range:U+102-103,U+110-111,U+128-129,U+168-169,U+1A0-1A1,U+1AF-1B0,U+300-301,U+303-304,U+308-309,U+323,U+329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvsYwYL8g.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJbecmNE.woff2)format("woff2");unicode-range:U+900-97F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJnecmNE.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2)format("woff2");unicode-range:U+900-97F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2)format("woff2");unicode-range:U+900-97F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2)format("woff2");unicode-range:U+900-97F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Urbanist;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/urbanist/v18/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4vH5mqe8Q.woff2)format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Urbanist;font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/urbanist/v18/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4vEZmq.woff2)format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -99,6 +99,74 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
+
+/* ==========================================================================
+   GALLERY MOVING ANIMATION SYSTEM (Desktop & Mobile)
+   ========================================================================== */
+
+/* Desktop Gallery Subtle Motion & Interactive Float */
+@keyframes desktopGalleryFloat {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes desktopGalleryDrift {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-18px, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+#Project {
+  position: relative;
+  overflow: visible;
+  transition: transform 0.4s ease;
+}
+
+#Project #Row, #Project #Row_0 {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+#Project:hover #Row {
+  animation: desktopGalleryDrift 16s ease-in-out infinite;
+}
+
+#Project #Content, #Project #Content_2, #Project #Content_3, #Project #Content_5 {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+#Project #Content:hover, #Project #Content_2:hover, #Project #Content_3:hover, #Project #Content_5:hover {
+  transform: translateY(-6px) scale(1.02);
+  z-index: 10;
+}
+
+/* Mobile Gallery Moving Track Animation */
+@keyframes mobileGalleryGlide {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-35px, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+#mob_Group_45, #mob_Group_46, #mob_Group_47 {
+  animation: mobileGalleryGlide 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+#mob_Group_46 {
+  animation-delay: -4.5s;
+}
+
+#mob_Group_47 {
+  animation-delay: -9s;
+}
+
+/* Pause animations if user interacts or touches */
+#mob_Group_45:active, #mob_Group_46:active, #mob_Group_47:active {
+  animation-play-state: paused;
+}
+
 
 /* ==========================================================================
    DESKTOP VERSION (Viewport >= 768px)
@@ -957,8 +1025,8 @@ img{image-rendering:auto;}
     width: 390px !important;
     min-width: 390px !important;
     max-width: 390px !important;
-    height: 6611px !important;
-    min-height: 6611px !important;
+    height: 6595px !important;
+    min-height: 6595px !important;
     max-height: none !important;
     position: absolute !important;
     top: 0 !important;
@@ -1376,6 +1444,171 @@ body ::-webkit-scrollbar { display: none; }
 
   /* Mobile Branding Styles */
   @media only screen and (max-width:768px){#made-with-f2w-logo{width:32px;height:32px}}
+
+  /* Mobile Moving Marquees & Bottom Whitespace Elimination */
+  
+/* Mobile Marquee Infrastructure */
+.mob-marquee-container {
+  overflow: hidden !important;
+  position: absolute !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+#mob_Container_0_0 {
+  width: 390px !important;
+  height: 90px !important;
+  top: 82px !important;
+  left: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+}
+
+#mob_about-salient-features_0 {
+  width: 390px !important;
+  height: 190px !important;
+  top: 2644px !important;
+  left: 0 !important;
+  background-color: #f2f4f7 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#mob__1_189 {
+  position: absolute !important;
+  top: 22px !important;
+  left: 20px !important;
+  font-family: Poppins, system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #a0a0a0 !important;
+}
+
+.mob-tools-track-wrapper {
+  position: absolute !important;
+  top: 60px !important;
+  left: 0 !important;
+  width: 390px !important;
+  height: 110px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.mob-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  will-change: transform;
+}
+
+/* Salient Features Animation */
+.mob-salient-track {
+  animation: mobContinuousSalient 22s linear infinite !important;
+}
+
+.mob-salient-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 28px !important;
+  padding-right: 28px !important;
+}
+
+.mob-salient-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.mob-salient-icon {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+
+.mob-salient-text {
+  font-family: Poppins, system-ui, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  color: #132238 !important;
+  white-space: nowrap !important;
+}
+
+/* Tools Marquee Animation */
+.mob-tools-track {
+  animation: mobContinuousTools 18s linear infinite !important;
+}
+
+.mob-tools-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  padding-right: 32px !important;
+}
+
+.mob-tool-item {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 70px !important;
+  background: #ffffff !important;
+  padding: 8px 18px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.mob-tool-img {
+  max-height: 42px !important;
+  max-width: 110px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+@keyframes mobContinuousSalient {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes mobContinuousTools {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Eliminate Unwanted Bottom Whitespace in Mobile */
+#mob__ {
+  min-height: 6595px !important;
+  height: 6595px !important;
+  max-height: 6595px !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+
+#mob___x2d_body {
+  height: 6595px !important;
+  min-height: 6595px !important;
+  max-height: 6595px !important;
+  overflow: hidden !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#mobile-version-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+
 }
 
   </style>
@@ -2028,16 +2261,16 @@ body ::-webkit-scrollbar { display: none; }
           <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-638f758108c0872ab8cb74192bc63dd97a88aa9e/public" alt="Image" id="mob___99" loading="lazy" decoding="async">
         </div>
         <span id="mob_Heading_2_CONTACT_US" class="pointer-events-none text"><span id="mob___100">CONTACT US</span></span>
-        <span id="mob_Heading_2_Let_s_Discuss_Your_Freight_Needs" class="pointer-events-none text"><span id="mob___101">Let's Discuss Your<br id="mob___102">Freight Needs</span></span>
-        <span id="mob_Heading_2_Ready_to_experience_top_notch_freight_forwarding_services_Contact_our_team_today_to_get_started_" class="pointer-events-none text"><span id="mob___103">Ready to experience top-notch freight forwarding<br id="mob___104">services? Contact our team today to get started.</span></span>
+        <span id="mob_Heading_2_Let_s_Discuss_Your_Freight_Needs" class="pointer-events-none text"><span id="mob___101">Let's Discuss Your<br id="mob___102">Architectural Dream</span></span>
+        <span id="mob_Heading_2_Ready_to_experience_top_notch_freight_forwarding_services_Contact_our_team_today_to_get_started_" class="pointer-events-none text"><span id="mob___103">Ready to design an extraordinary home, commercial project, or luxury interior? Contact Dr. Ar. Sarath Sasi P and our design studio today.</span></span>
         <div id="mob_Image_6">
           <div id="mob_phone_svg">
 <svg preserveAspectRatio="none" id="mob_Vector_3" class="pointer-events-none" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.42 19.6731V23.4231C25.4214 23.7712 25.3501 24.1158 25.2107 24.4347C25.0712 24.7537 24.8666 25.0401 24.6101 25.2754C24.3535 25.5107 24.0507 25.6899 23.721 25.8014C23.3912 25.913 23.0417 25.9544 22.695 25.9231C18.8485 25.5051 15.1538 24.1907 11.9075 22.0856C8.88732 20.1664 6.32668 17.6058 4.40751 14.5856C2.29498 11.3246 0.980313 7.61183 0.570008 3.74807C0.538767 3.4024 0.579847 3.05402 0.690629 2.7251C0.801411 2.39618 0.979467 2.09393 1.21346 1.8376C1.44746 1.58126 1.73226 1.37646 2.04974 1.23623C2.36723 1.09599 2.71043 1.0234 3.05751 1.02307H6.8075C7.41411 1.0171 8.00225 1.23192 8.4622 1.62749C8.92216 2.02305 9.22264 2.57238 9.30752 3.17308C9.46577 4.37316 9.7593 5.55145 10.1825 6.68558C10.3507 7.13299 10.3871 7.6192 10.2874 8.08665C10.1877 8.55411 9.95607 8.98324 9.62 9.32306L8.03252 10.9105C9.81193 14.04 12.403 16.6311 15.5325 18.4105L17.12 16.8231C17.4599 16.487 17.889 16.2554 18.3564 16.1557C18.8239 16.056 19.3101 16.0924 19.7575 16.2606C20.8916 16.6838 22.0699 16.9773 23.27 17.1356C23.8772 17.2212 24.4318 17.5271 24.8282 17.995C25.2246 18.4628 25.4353 19.06 25.42 19.6731Z" stroke="#0072AC" stroke-width="2.04545" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </div>
         </div>
         <span id="mob_Heading_2_Call_Us" class="pointer-events-none text"><span id="mob___105">Call Us</span></span>
-        <span id="mob_Heading_2_Link_966_535_964_692" class="pointer-events-none text"><span id="mob___106">+966 535 964 692</span></span>
-        <span id="mob_Heading_2_Link_966_535_964_692_0" class="pointer-events-none text"><span id="mob___107">+966 535 964 692</span></span>
+        <span id="mob_Heading_2_Link_966_535_964_692" class="pointer-events-none text"><span id="mob___106">+45 535 964 692</span></span>
+        <span id="mob_Heading_2_Link_966_535_964_692_0" class="pointer-events-none text"><span id="mob___107">+45 535 964 692</span></span>
         <div id="mob_Link_Whatsapp_png" class="pointer-events-none">
           <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-feba5f49cda3da85ebfb654269e17cc48b1a6a27/public" alt="Link → Whatsapp.png" id="mob___108" loading="lazy" decoding="async">
         </div>
@@ -2045,12 +2278,12 @@ body ::-webkit-scrollbar { display: none; }
 <svg preserveAspectRatio="none" id="mob_mail_svg" class="pointer-events-none" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.91999 5H22.92C24.295 5 25.42 6.125 25.42 7.50002V22.5C25.42 23.875 24.295 25 22.92 25H2.91999C1.545 25 0.419998 23.875 0.419998 22.5V7.50002C0.419998 6.125 1.545 5 2.91999 5Z" stroke="#0072AC" stroke-width="2.04545" stroke-linecap="round" stroke-linejoin="round"></path><path d="M25.42 7.5L12.92 16.25L0.419998 7.5" stroke="#0072AC" stroke-width="2.04545" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </div>
         <span id="mob_Heading_2_Email" class="pointer-events-none text"><span id="mob___109">Email</span></span>
-        <span id="mob_Heading_2_Link_info_globalsolutionlog_com" class="pointer-events-none text"><span id="mob___110">info@globalsolutionlog.com</span></span>
+        <span id="mob_Heading_2_Link_info_globalsolutionlog_com" class="pointer-events-none text"><span id="mob___110">sarath@architectstudio.in</span></span>
         <div id="mob_Image_8">
 <svg preserveAspectRatio="none" id="mob_address_svg" class="pointer-events-none" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#_1_110__clip0_1_110)"><path d="M24.17 12.5C24.17 21.25 12.92 28.75 12.92 28.75C12.92 28.75 1.67 21.25 1.67 12.5C1.67 9.51629 2.85526 6.65484 4.96505 4.54505C7.07486 2.43526 9.93628 1.25 12.92 1.25C15.9037 1.25 18.7651 2.43526 20.8749 4.54505C22.9847 6.65484 24.17 9.51629 24.17 12.5Z" stroke="#0072AC" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.92 16.25C14.9911 16.25 16.67 14.5711 16.67 12.5C16.67 10.4289 14.9911 8.75 12.92 8.75C10.8489 8.75 9.17 10.4289 9.17 12.5C9.17 14.5711 10.8489 16.25 12.92 16.25Z" stroke="#0072AC" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="mob__1_110__clip0_1_110"><rect width="30" height="30" fill="white" transform="translate(-2.08)"></rect></clipPath></defs></svg>
         </div>
         <span id="mob_Heading_2_Address" class="pointer-events-none text"><span id="mob___111">Address</span></span>
-        <span id="mob__4068_Office_5_A_Near_Aldor_Medical_Center_Pearl_Street_Saihat_32451_6949_Dammam_Kingdom_of_Saudi_Arabia" class="pointer-events-none text"><span id="mob___112">Global Solution For Shipping Est<br id="mob___113"></span><span id="mob___114">Al Ghanim Business Center # 4068 Office 5/A,Near Aldor<br id="mob___115">Medical Center, Pearl Street Saihat 32451-<br id="mob___116">6949,Dammam, Kingdom&nbsp;of&nbsp;Saudi&nbsp;Arabia</span></span>
+        <span id="mob__4068_Office_5_A_Near_Aldor_Medical_Center_Pearl_Street_Saihat_32451_6949_Dammam_Kingdom_of_Saudi_Arabia" class="pointer-events-none text"><span id="mob___112">ARCHITECT STUDIO<br id="mob___113"></span><span id="mob___114">Al Ghanim Business Center # 4068 Office 5/A,Near Aldor<br id="mob___115">Medical Center, Pearl Street Saihat 32451-<br id="mob___116">6949,Dammam, Kingdom&nbsp;of&nbsp;Saudi&nbsp;Arabia</span></span>
         <div id="mob_Background_Border_4">
           <div id="mob_contactForm">
             <span id="mob__1_117" class="pointer-events-none text"><span id="mob___117">First Name*</span></span>
@@ -2093,11 +2326,11 @@ body ::-webkit-scrollbar { display: none; }
           </div>
         </div>
         <span id="mob_Heading_2_Services" class="pointer-events-none text"><span id="mob___128">Services</span></span>
-        <span id="mob_Heading_2_Air_Freight_0" class="pointer-events-none text"><span id="mob___129">Air Freight</span></span>
-        <span id="mob_Heading_2_Sea_Freight_0" class="pointer-events-none text"><span id="mob___130">Sea Freight</span></span>
-        <span id="mob_Heading_2_Land_Freight_0" class="pointer-events-none text"><span id="mob___131">Land Freight</span></span>
-        <span id="mob_Heading_2_Customs_Clearance_0" class="pointer-events-none text"><span id="mob___132">Customs Clearance</span></span>
-        <span id="mob_Heading_2_Warehousing_0" class="pointer-events-none text"><span id="mob___133">Warehousing</span></span>
+        <span id="mob_Heading_2_Air_Freight_0" class="pointer-events-none text"><span id="mob___129">Architectural Design</span></span>
+        <span id="mob_Heading_2_Sea_Freight_0" class="pointer-events-none text"><span id="mob___130">Interior Architecture</span></span>
+        <span id="mob_Heading_2_Land_Freight_0" class="pointer-events-none text"><span id="mob___131">Sustainable Design</span></span>
+        <span id="mob_Heading_2_Customs_Clearance_0" class="pointer-events-none text"><span id="mob___132">Master Planning</span></span>
+        <span id="mob_Heading_2_Warehousing_0" class="pointer-events-none text"><span id="mob___133">Turnkey Execution</span></span>
         <span id="mob_Heading_2_Company" class="pointer-events-none text"><span id="mob___134">Company</span></span>
         <span id="mob_Heading_2_About" class="pointer-events-none text"><span id="mob___135">About</span></span>
         <span id="mob_Heading_2_Services_0" class="pointer-events-none text"><span id="mob___136">Services</span></span>
@@ -2132,48 +2365,80 @@ body ::-webkit-scrollbar { display: none; }
     </div>
     <div id="mob_about-salient-features">
       <span id="mob__1_176" class="pointer-events-none text"><span id="mob___143">OUR SALIENT FEATURES</span></span>
-      <div id="mob_Container_0_0">
-        <div id="mob___31_0" class="pointer-events-none">
-          <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="ChatGPT Image Sep 21, 2026, 10_48_19 AM 1" id="mob___144" loading="lazy" decoding="async">
+      <div id="mob_Container_0_0" class="mob-marquee-container mob-salient-marquee">
+        <div class="mob-marquee-track mob-salient-track">
+          <!-- Group 1 -->
+          <div class="mob-salient-group">
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Sustainable Design" class="mob-salient-icon">
+              <span class="mob-salient-text">Sustainable<br>Design</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="480+ Completed" class="mob-salient-icon">
+              <span class="mob-salient-text">480+ Completed<br>Projects &amp; Villas</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Award Winner" class="mob-salient-icon">
+              <span class="mob-salient-text">National Award Winner<br>2021 &amp; 2022 Excellence</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="PhD Certified" class="mob-salient-icon">
+              <span class="mob-salient-text">Sustainable Architecture<br>PhD Certified</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon">
+              <span class="mob-salient-text">40+ Expert Contractors<br>&amp; Turnkey Execution</span>
+            </div>
+          </div>
+          <!-- Group 2 (Duplicate for Seamless Loop) -->
+          <div class="mob-salient-group" aria-hidden="true">
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Sustainable Design" class="mob-salient-icon">
+              <span class="mob-salient-text">Sustainable<br>Design</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="480+ Completed" class="mob-salient-icon">
+              <span class="mob-salient-text">480+ Completed<br>Projects &amp; Villas</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="Award Winner" class="mob-salient-icon">
+              <span class="mob-salient-text">National Award Winner<br>2021 &amp; 2022 Excellence</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="PhD Certified" class="mob-salient-icon">
+              <span class="mob-salient-text">Sustainable Architecture<br>PhD Certified</span>
+            </div>
+            <div class="mob-salient-item">
+              <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="Turnkey" class="mob-salient-icon">
+              <span class="mob-salient-text">40+ Expert Contractors<br>&amp; Turnkey Execution</span>
+            </div>
+          </div>
         </div>
-        <span id="mob__1_179" class="pointer-events-none text"><span id="mob___145">Sustainable<br id="mob___146">Design</span></span>
-        <div id="mob___34_0" class="pointer-events-none">
-          <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="ChatGPT Image Sep 21, 2026, 10_48_19 AM 2" id="mob___147" loading="lazy" decoding="async">
-        </div>
-        <span id="mob__1_181" class="pointer-events-none text"><span id="mob___148">480+ Completed<br id="mob___149">Projects &amp; Villas</span></span>
-        <div id="mob___37_0" class="pointer-events-none">
-          <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="ChatGPT Image Sep 21, 2026, 10_48_19 AM 3" id="mob___150" loading="lazy" decoding="async">
-        </div>
-        <span id="mob__1_183" class="pointer-events-none text"><span id="mob___151">National Award Winner<br id="mob___152">2021 &amp; 2022 Excellence</span></span>
-        <div id="mob___40_0" class="pointer-events-none">
-          <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-9bf72b74e56f14a974917754503bfe5400f8c3a5/public" alt="ChatGPT Image Sep 21, 2026, 10_48_19 AM 4" id="mob___153" loading="lazy" decoding="async">
-        </div>
-        <span id="mob__1_185" class="pointer-events-none text"><span id="mob___154">Sustainable Architecture<br id="mob___155">PhD Certified </span></span>
-        <div id="mob___43_0" class="pointer-events-none">
-          <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-23b13d3488bcaa59b5b8ed62b149caf68ead7679/public" alt="ChatGPT Image Sep 21, 2026, 10_48_19 AM 1" id="mob___156" loading="lazy" decoding="async">
-        </div>
-        <span id="mob__1_187" class="pointer-events-none text"><span id="mob___157">40+ Expert Contractors<br id="mob___158">&amp; Turnkey Execution</span></span>
       </div>
     </div>
-    <div id="mob_about-salient-features_0">
+    <div id="mob_about-salient-features_0" class="mob-marquee-container mob-tools-marquee-bar">
       <span id="mob__1_189" class="pointer-events-none text"><span id="mob___159">Tools we use</span></span>
-      <div id="mob___72_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-46b87cebf5d58fff3bfdb7d622162692d1cb909e/public" alt="image 1" id="mob___160" loading="lazy" decoding="async">
-      </div>
-      <div id="mob___73_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-7c8f18c9b24cfed17b5fa452908fc22d5ba70d64/public" alt="image 2" id="mob___161" loading="lazy" decoding="async">
-      </div>
-      <div id="mob___74_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-1a921a71193f4baaa6b20ab56bd1bb13bd2ffd17/public" alt="image 13" id="mob___162" loading="lazy" decoding="async">
-      </div>
-      <div id="mob___75_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-0e34d50ebac0cd10db0c526433efd16c54fb487d/public" alt="image 12" id="mob___163" loading="lazy" decoding="async">
-      </div>
-      <div id="mob___76_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-03a1bbec4730161522e6efcb63f745bffb02d82b/public" alt="image 14" id="mob___164" loading="lazy" decoding="async">
-      </div>
-      <div id="mob___77_0" class="pointer-events-none">
-        <img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-237295f0afbc4e18075a4e8cafb942b6c96b8ddf/public" alt="image 15" id="mob___165" loading="lazy" decoding="async">
+      <div class="mob-tools-track-wrapper">
+        <div class="mob-marquee-track mob-tools-track">
+          <!-- Group 1 -->
+          <div class="mob-tools-group">
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-46b87cebf5d58fff3bfdb7d622162692d1cb909e/public" alt="AutoCAD" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-fc6e94473347f8ae26c117b186b1f23bb1d9db52/public" alt="3ds Max" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-24874c4314db5a5fbc40d7c0f16f56361a943714/public" alt="Revit" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-5e5898863c0a5975143a53d100067643b2f56ca1/public" alt="Photoshop" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-c0f2b3e4142f3ea9ea65a6e2a901844fa0cb1628/public" alt="Rhino" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-769b7f58cb2e95648ca4e815616f7344be896f6a/public" alt="Lumion" class="mob-tool-img"></div>
+          </div>
+          <!-- Group 2 (Duplicate for Seamless Loop) -->
+          <div class="mob-tools-group" aria-hidden="true">
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-46b87cebf5d58fff3bfdb7d622162692d1cb909e/public" alt="AutoCAD" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-fc6e94473347f8ae26c117b186b1f23bb1d9db52/public" alt="3ds Max" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-24874c4314db5a5fbc40d7c0f16f56361a943714/public" alt="Revit" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-5e5898863c0a5975143a53d100067643b2f56ca1/public" alt="Photoshop" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-c0f2b3e4142f3ea9ea65a6e2a901844fa0cb1628/public" alt="Rhino" class="mob-tool-img"></div>
+            <div class="mob-tool-item"><img src="https://gweneth-tfbdx2467c.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/gweneth-tfbdx2467c.figweb.site-769b7f58cb2e95648ca4e815616f7344be896f6a/public" alt="Lumion" class="mob-tool-img"></div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="mob_Group_45">
@@ -2246,7 +2511,7 @@ body ::-webkit-scrollbar { display: none; }
 
 (function() {
   const DESKTOP_W = 1920, DESKTOP_H = 9020;
-  const MOBILE_W = 390, MOBILE_H = 6611;
+  const MOBILE_W = 390, MOBILE_H = 6595; // Exact flush bottom at footer
   const root = document.documentElement;
   const bodyEl = document.body;
 
